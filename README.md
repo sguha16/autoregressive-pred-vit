@@ -330,7 +330,7 @@ Similar MSE occurs because noisy ground truth has energy spread across many pixe
 
 ### 5.4 Three Target Results
 
-![Three Target Results](Figures/3target/VIT_GT_prev.png)
+![Three Target Results](Figures/3targets/VIT_GT_prev.png)
 
 *Three-target prediction showing similar spatial blur*
 
