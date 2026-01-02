@@ -203,7 +203,7 @@ Kalman Filter designed for single target. Multi-target scenarios require data as
 ________________________________________
 5. Results and Analysis
 5.1 Training Convergence
- 
+ ![Loss comparison](Figures/loss_comparison.png)
 Loss curves showing convergence by epoch 30-40 for all scenarios
 Observations:
 •	All models converge by epoch 30-40
@@ -223,7 +223,7 @@ Multi-target ground truth:
 Key Insight: MSE loss is misleading for sparse multi-peak prediction. Low loss ≠ good prediction quality.
 ________________________________________
 5.2 Single Target Results
- 
+ ![Results 1 target](Figures/1target/VIT_GT_prev.png)
 Comparison of ViT and Kalman Filter predictions for single-target scenario
 Quantitative Comparison:
 Method	MSE Loss	Peak Location
@@ -234,7 +234,7 @@ ViT successfully learns temporal dynamics (Block B works well) but struggles wit
 Similar MSE occurs because noisy ground truth has energy spread across many pixels. VIT's blur matches this spread better than KF's sharp peaks, despite KF being qualitatively superior.
 ________________________________________
 5.3 Two Target Results
- 
+ ![Results 2 targets](Figures/2targets/VIT_GT_prev.png)
 Two-target prediction showing merged blob instead of distinct peaks
 Quantitative:
 MSE Loss: 0.0006
@@ -243,7 +243,7 @@ Observations:
 •	Despite low MSE loss (~0.004), the model cannot resolve individual targets. The 192-dim bottleneck cannot encode precise locations of multiple peaks simultaneously. This is an architectural limitation.
 ________________________________________
 5.4 Three Target Results
- 
+  ![Results 3 targets](Figures/3target/VIT_GT_prev.png)
 Three-target prediction showing similar spatial blur
 Observations:
 •	Further degradation in spatial resolution
